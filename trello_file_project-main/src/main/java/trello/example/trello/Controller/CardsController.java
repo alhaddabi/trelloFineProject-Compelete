@@ -41,6 +41,7 @@ public class CardsController {
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
+    // get all the cardes
     @GetMapping
     public List<Cards> getcards () {
         return cardsService.getCards();

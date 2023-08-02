@@ -23,17 +23,20 @@ public class BoardService {
         return boardRepository.save(board);
     }
 
-    public List<Board> getBoard(){ //to get all the boards
+
+    //to get all the boards
+    public List<Board> getBoard(){
         return boardRepository.findAll();
     }
 
 
-    // get the boards
-    public GetBoardResponse getBoardById(Long boardId) { //get by id
+    // get the boards by the ID
+    public GetBoardResponse getBoardById(Long boardId) {
         Optional<Board> optionalBoard = boardRepository.findById(boardId);
         if (optionalBoard.isPresent()) {
             Board board = optionalBoard.get();
             GetBoardResponse response = new GetBoardResponse();
+            response.setBoardId(String.valueOf(board.getBoardId()));
             response.setTitle(board.getTitle());
             return response;
         }
@@ -58,6 +61,17 @@ public class BoardService {
     }
 
     // find Board by ID
+    public GetBoardResponse getBoardResponse(Long boardId)
+    {
+        Optional<Board> optionalBoard = boardRepository.findById(boardId);
+        if (optionalBoard.isPresent()) {
+            Board board = optionalBoard.get();
+            GetBoardResponse response = new GetBoardResponse();
+            response.setTitle(board.getTitle());
+            return response;
+        }
+        return null;
+    }
 
 }
 

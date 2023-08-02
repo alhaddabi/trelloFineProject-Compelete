@@ -29,5 +29,6 @@ public class GetBoardResponse {
 
 
     public void setTitle(String title) {
+        this.name = title;
     }
 }
