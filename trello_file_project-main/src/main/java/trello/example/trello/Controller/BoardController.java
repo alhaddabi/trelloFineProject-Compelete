@@ -64,7 +64,7 @@ public class BoardController {
     public void deleteBoard (@PathVariable Long boardId) {
         boardService.deleteBoardById(boardId);
     }
-//
+
 
 
     // get the Boards by ID
