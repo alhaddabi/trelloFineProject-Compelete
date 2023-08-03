@@ -65,6 +65,8 @@ public class BoardController {
         boardService.deleteBoardById(boardId);
     }
 
+
+
     // get the Boards by ID
     @GetMapping("/{boardId}")
     public GetBoardResponse getBoardId (@PathVariable Long boardId) {

@@ -21,7 +21,7 @@ public class CardsService {
     public Cards addCardToBoard(Long boardId, Cards newCard) {
 
         // Your implementation for addCardToBoard
-        newCard.setSection(""); // Set the section (if required)
+        newCard.setSection("3"); // Set the section (if required)
 
         // Save the card to the database using the repository
         Cards savedCard = cardsRepository.save(newCard);

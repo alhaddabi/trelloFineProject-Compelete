@@ -27,7 +27,6 @@ public class Board extends BaseEntity{
     @Column(name = "column_name")
     private Map<Integer, String> columns;
 
-    // Constructors, getters, and setters
 }
 
 
